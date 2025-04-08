@@ -1,0 +1,186 @@
+/*Import font from Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Set default margin, padding, font, and box-sizing for all elements*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/*Style for the entire page body*/
+body {
+    background-color: #f0f0f0;
+    position: relative;
+    min-height: 100vh;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none; /*This disables selection (highlighting)*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/*Style for the header*/
+.header {
+    background-color: #000000;
+    color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 9px 10px #00000033;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*Style for the main content container */
+.container {
+    text-align: center;
+    margin: 5%;
+    margin-top: -10px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.game-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 9px 10px #00000033;
+    max-width: none;
+    width: 100%;
+}
+
+/*Style for the flag container*/
+.flag-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/*Style for the flag image*/
+#flag {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 300px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: block;
+}
+
+/*Style for the hint*/
+#hint {
+    font-size: 16px;
+    margin: 10px;
+    min-height: 24px;
+}
+
+/*Style for the options container*/
+#options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+/*Style for the players score display*/
+#score {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px auto;
+    color: #fff;
+    background: #9a0606;
+    border-radius: 8px;
+    padding: 5px 10px;
+    display: inline-block;
+    width: max-content;
+}
+
+/*Style for the total number of flags displayed*/
+#total-flags {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/*Style for the game option buttons*/
+.option {
+    background-color: #0d0d0d;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    min-width: 150px;
+}
+
+/*Hover effect for the option buttons*/
+.option:hover {
+    transform: scale(0.95);
+    background-color: #9a0606;
+}
+
+/*Style for the play-again button*/
+#play-again {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: #9a0606;
+    border-radius: 50%;
+    display: block;
+    margin: 15px auto;
+    transition: transform 0.2s ease;
+    padding: 5px;
+}
+
+/*Hover effect for the play-again button*/
+#play-again:hover {
+    transform: scale(1.1);
+    background-color: #730404;
+}
+
+/*Style for the message container*/
+.message {
+    min-height: 20px;
+    margin: 10px 0;
+}
+
+/*Style for the "Correct!" message*/
+.message.correct {
+    color: green;
+    font-weight: bold;
+}
+
+/*Style for the "Wrong!" message*/
+.message.wrong {
+    color: red;
+    font-weight: bold;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+    }
+    
+    #flag {
+        max-width: 200px;
+    }
+    
+    .option {
+        min-width: 120px;
+        padding: 8px 15px;
+    }
+}

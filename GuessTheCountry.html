@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Quiz game using html, css, javascript">
+        <meta name="keywords" content="quiz, html, css, javascript">
+        <title>Guess the Country</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    </head>
+    <body oncontextmenu="return false"> <!--To prevent user from right-clicking page-->
+        <!--Style for the main content container-->
+        <div class="container">
+            <!--Create a container for the header-->
+            <div class="header">
+                <h1>
+                    <!--Add logo to the title of the game-->
+                    <img src="world-globe-earth-map-png.webp" alt="Logo" style="width: 50px; height: auto; vertical-align: middle;">
+                    Guess The Country
+                </h1>
+            </div>
+
+            <!--Create a container for the game content-->
+            <div class="game-container">
+                <!--Create a container for the flag images-->
+                <div class="flag-container">
+                    <!--Display the flag image-->
+                    <img id="flag" src="" alt="Flag">
+                </div>
+
+                <!--Display hint information-->
+                <div id="hint">Capital: , Continent: </div>
+
+                <!--Create options for the game-->
+                <div id="options">
+                    <button class="option" onclick="checkAnswer(this)">Option 1</button>
+                    <button class="option" onclick="checkAnswer(this)">Option 2</button>
+                    <button class="option" onclick="checkAnswer(this)">Option 3</button>
+                </div>
+            </div>
+
+            <!--Display the score-->
+            <div id="score">Score: 0</div>
+
+            <!--Display the current flag-->
+            <div id="total-flags">Flag: 0 / 0 </div>
+
+            <!--Create a container for message-->
+            <div class="message"></div>
+
+            <!--Create a button to play the game again-->
+            <button id="play-again" onclick="playAgain()" style="display: none;">
+                <!--Use an image to represent the button-->
+                <img src="repeat.png" alt="Play Again" width="40px" height="40px">
+            </button>
+        </div>
+        <!--Link to the external javascript file-->
+        <script src="script.js"></script>
+    </body>
+</html>
